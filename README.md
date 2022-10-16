@@ -1,4 +1,4 @@
-Created using [https://github.com/saltyshiomix/nextron](nextron)
+Created using [nextron](https://github.com/saltyshiomix/nextron)
 
 ![image](https://user-images.githubusercontent.com/16888264/196013645-fb43deae-537e-4430-a051-c750ea43b223.png)
 
