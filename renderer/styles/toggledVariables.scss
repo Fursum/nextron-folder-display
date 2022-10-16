@@ -1,0 +1,58 @@
+// This is only imported in globals.scss
+
+/*
+  Naming Structure
+  [type]-[description]-[number of layer*]-[variation]
+
+  number of layer: The element is closer to the screen when the number increases,
+    For example:  color-background-1 is the site background, 
+                  color-background-2 is an element in front of the site background
+
+    ------------------------------------------
+    |           color-background-1           |
+    |                                        |
+    |   ----------------------------------   |
+    |   |       color-background-2       |   |
+    |   |                                |   |
+    |   |   --------------------------   |   |
+    |   |   |   color-background-3   |   |   |
+    |   |   |                        |   |   |
+    |   |   --------------------------   |   |
+    |   |                                |   |
+    |   |                                |   |
+    |   ----------------------------------   |
+    ------------------------------------------
+*/
+
+html[data-theme="dark"],
+html {
+  --color-white: hsl(0, 0%, 90%);
+  --color-primary: #9e0031;
+  --color-secondary: #377771;
+
+  --color-background-1: hsl(228, 4%, 22%);
+  --color-text: var(--color-white);
+
+  --color-button: var(--color-background-1);
+  --color-button-hover: hsl(220, 3%, 18%);
+
+  --shadow-button: 0 0 0.5rem -0.1rem hsla(0, 0%, 0%, 0.9),
+    inset 0 1.5rem 2rem -3rem white;
+  --shadow-button-hover: inset 0 1rem 0.5rem -1rem black;
+}
+html[data-theme="light"] {
+  --color-white: white;
+  --color-primary: #9e0031;
+  --color-secondary: #377771;
+
+  --color-background-1: hsl(0, 0%, 95%);
+  --color-text: hsl(0, 0%, 10%);
+
+  --color-button: var(--color-background-1);
+  --color-button-hover: var(--color-button);
+
+  --shadow-button: 0.25rem 0.25rem 0.75rem -0.1rem rgba(0, 0, 0, 0.2),
+    /* Diffuse light */ inset 1.5rem 1.5rem 2rem -1.5rem white,
+    /* Highlight */ inset 0.1rem 0.1rem 0.1rem 0 white;
+  --shadow-button-hover: inset 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
