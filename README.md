@@ -1,38 +1,16 @@
-<p align="center"><img src="https://i.imgur.com/NZfsD1p.png"></p>
+Created using [https://github.com/saltyshiomix/nextron](nextron)
 
-## Usage
+![image](https://user-images.githubusercontent.com/16888264/196013645-fb43deae-537e-4430-a051-c750ea43b223.png)
 
-### Create an App
+## Features
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript
+- [x] Folder navigation
+- [x] Image and video display
+- [ ] Column number options
+- [ ] Enlarge files
 
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript
+### How to tinker
 
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript
-```
-
-### Install Dependencies
-
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+1. Clone or download this repo. 
+2. In the folder, run `yarn install` or `npm install` *or any other package manager*.
+3. After the installation, start the dev server with `yarn dev` or `npm run dev`.
