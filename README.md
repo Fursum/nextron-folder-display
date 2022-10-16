@@ -2,6 +2,12 @@ Created using [https://github.com/saltyshiomix/nextron](nextron)
 
 ![image](https://user-images.githubusercontent.com/16888264/196013645-fb43deae-537e-4430-a051-c750ea43b223.png)
 
+## How to navigate the project
+
+`/renderer` folder has the frontend. (Next.js)
+
+`/main/helpers/create-window.ts` has the backend listeners. (ipc)
+
 ## Features
 
 - [x] Folder navigation
