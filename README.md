@@ -13,7 +13,7 @@ Created using [nextron](https://github.com/saltyshiomix/nextron)
 - [x] Folder navigation
 - [x] Image and video display
 - [ ] Column number options
-- [ ] Enlarge files
+- [x] Enlarge files
 
 ### How to tinker
 
