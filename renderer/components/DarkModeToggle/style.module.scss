@@ -13,8 +13,15 @@
   outline: 2px solid var(--color-text);
   background-color: var(--color-background-1);
 
+  box-shadow: none;
+
   &:hover {
     background-color: inherit;
+
+    // Shadow for crescent
+    .innerSlider::after {
+      background-color: var(--color-button-hover);
+    }
   }
 
   &::before,

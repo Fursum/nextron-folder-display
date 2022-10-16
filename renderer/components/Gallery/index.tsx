@@ -1,8 +1,7 @@
-import Folder from "@components/SVGComponents/Folder";
 import { getFolderContents } from "lib/api";
-import { FileType, getFileType, makeSrc } from "lib/parser";
-import { FC, useEffect, useMemo, useRef, useState } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
+
+import { FC, useEffect, useMemo, useState } from "react";
+import FileDisplay from "./FileDisplay";
 
 import styles from "./style.module.scss";
 
@@ -36,7 +35,7 @@ const Gallery: FC<{ startingPath: string }> = ({ startingPath }) => {
   const FileList = useMemo(() => {
     return files.map((file) => {
       return (
-        <RenderFile
+        <FileDisplay
           path={localPath + "\\" + file}
           key={file}
           openFolder={openFolder}
@@ -63,41 +62,4 @@ const Gallery: FC<{ startingPath: string }> = ({ startingPath }) => {
   );
 };
 
-const RenderFile: FC<{ path: string; openFolder: (path: string) => void }> = ({
-  path,
-  openFolder,
-}) => {
-  const ref = useRef(null);
-  const intersection = useIntersectionObserver(ref, {
-    threshold: 0,
-  });
-
-  const File: FC = () => {
-    if (!intersection?.isIntersecting) return <>Not intersecting</>;
-
-    const fileType = getFileType(path);
-    const url = makeSrc(path.replaceAll("\\", "/"));
-
-    if (fileType === FileType.VIDEO) {
-      return <video src={url} autoPlay loop muted />;
-    }
-    if (fileType === FileType.IMAGE) {
-      return <img src={url} />;
-    }
-    if (fileType === FileType.FOLDER)
-      return (
-        <button onClick={() => openFolder(path)}>
-          <Folder />
-        </button>
-      );
-    return <div>Not supported.</div>;
-  };
-
-  return (
-    <button ref={ref} className={styles.element}>
-      <span>{path.split("\\").pop()}</span>
-      {<File />}
-    </button>
-  );
-};
 export default Gallery;

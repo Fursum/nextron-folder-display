@@ -8,13 +8,13 @@ const Folder: FC<Props> = ({ color = "var(--color-text)", className }) => {
       viewBox="0.0 0.0 960.0 720.0"
       fill="none"
       stroke="none"
-      stroke-linecap="square"
-      stroke-miterlimit="10"
+      strokeLinecap="square"
+      strokeMiterlimit="10"
     >
       <clipPath id="p.0">
         <path d="m0 0l960.0 0l0 720.0l-960.0 0l0 -720.0z" clipRule="nonzero" />
       </clipPath>
-      <g clip-path="url(#p.0)">
+      <g clipPath="url(#p.0)">
         <path
           fill={color}
           fillOpacity="0.0"
