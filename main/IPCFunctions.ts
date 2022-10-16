@@ -1,5 +1,5 @@
 import { BrowserWindow, dialog } from "electron";
-import { readdirSync, readFileSync } from "fs";
+import { readdirSync } from "fs";
 
 export enum FileSignals {
   SELECT_FOLDER = "file/selectFolder",
